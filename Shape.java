@@ -8,10 +8,26 @@ public abstract class Shape
 	private Color color;
 	private boolean filled;
 	
-	public Shape(Color color, boolean b) 
+	public Shape(Color color, boolean filled) 
 	{
-		// TODO Auto-generated constructor stub
+		this.color = color;
+		this.filled = filled;
 	}
-	public abstract void draw(Graphics graphics);
+	
+	public Point[] getLocation() 
+	{
+		return location;
+	}
 
+	public Color getColor() 
+	{
+		return color;
+	}
+
+	public boolean isFilled() 
+	{
+		return filled;
+	}
+
+	public abstract void draw(Graphics graphics);
 }
