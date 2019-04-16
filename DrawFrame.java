@@ -17,10 +17,11 @@ public class DrawFrame extends JFrame
 	}
 	
 	public static void main(String[] args)
-	{
+	{		
 		RightTriangle t = new RightTriangle(new Point(100, 100), 20, 50, Color.BLUE, true);
 		
 		drawPanel.addShape(t);
+		
 		DrawFrame drawFrame = new DrawFrame("test");
 	}
 }	

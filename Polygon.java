@@ -25,8 +25,16 @@ public abstract class Polygon extends Shape
         	xPoints[i] = location[i].x;
         	yPoints[i] = location[i].y;
         }
-
-        g2d.drawPolygon(xPoints, yPoints, nPoints);
+        
+        if (this.isFilled())
+		{
+        	g2d.fillPolygon(xPoints, yPoints, nPoints);
+		}
+		else
+		{
+			g2d.drawPolygon(xPoints, yPoints, nPoints);
+		}
+        
 	}
 
 }
