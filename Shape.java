@@ -28,6 +28,4 @@ public abstract class Shape implements Drawable
 	{
 		return filled;
 	}
-
-	public abstract void draw(Graphics graphics);
 }

@@ -72,13 +72,13 @@ public class Sinusoid extends Shape
 			// convert time to radians
 			double rad = angFreq * t;
 			
-			// TODO: calculate next x,y point
 			//y = yOffset + amplitude * sin(radians)
 			//x = xOffset + i * dx;
-			int xNext = ... // TODO:
-			int yNext = ... // TODO:
+			int yNext = y0 + (int)(amplitude * Math.sin(rad));
+			int xNext = x0 + i * dx;
 			
-			// TODO: create a point and store it into the locations list
+			Point nextPoint = new Point(xNext, yNext);
+			location[i] = nextPoint;
 		}
 	}
 
@@ -97,8 +97,16 @@ public class Sinusoid extends Shape
 		g2d.setStroke(new BasicStroke(5));
         
         int nPoints = location.length;
+        int[] xPoints = new int[location.length];
+        int[] yPoints = new int[location.length];
+        for (int i = 0; i < location.length; ++i)
+        {
+        	xPoints[i] = location[i].x;
+        	yPoints[i] = location[i].y;
+        }
         
         // TODO: Draw a sequence of connected line segments to render a sinusoid
+        g2d.drawPolyline(xPoints, yPoints, nPoints);
 
 	}
 

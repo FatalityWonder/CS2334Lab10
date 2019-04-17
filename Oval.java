@@ -15,6 +15,8 @@ public class Oval extends Shape
 		
 		this.diameter1 = diameter1;
 		this.diameter2 = diameter2;
+		location = new Point[1];
+		
 		location[0] = pointUL;
 	}
 	

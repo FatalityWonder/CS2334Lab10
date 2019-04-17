@@ -1,5 +1,4 @@
 import java.awt.Graphics;
-import java.awt.Graphics2D;
 import java.util.ArrayList;
 import javax.swing.JPanel;
 
@@ -21,5 +20,10 @@ public class DrawPanel extends JPanel
 	protected void paintComponent(Graphics graphics)
 	{
 		super.paintComponent(graphics);
+		
+		for (Shape shape : shapeList)
+		{
+			shape.draw(graphics);;
+		}
 	}
 }

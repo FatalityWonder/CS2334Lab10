@@ -10,8 +10,8 @@ public class Rectangle extends Polygon
 		
 		location[0] = pointUL;
 		location[1] = new Point((int)pointUL.getX() + width, (int)pointUL.getY());
-		location[2] = new Point((int)pointUL.getX(), (int)pointUL.getY() + height);
-		location[3] = new Point((int)pointUL.getX() + width, (int)pointUL.getY() + height);		
+		location[2] = new Point((int)pointUL.getX() + width, (int)pointUL.getY() + height);
+		location[3] = new Point((int)pointUL.getX(), (int)pointUL.getY() + height);		
 	}
 
 }
