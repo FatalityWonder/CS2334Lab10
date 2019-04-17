@@ -4,8 +4,15 @@ import javax.swing.JFrame;
 
 public class DrawFrame extends JFrame 
 {
+	/**
+	 * Panel all shapes are added to
+	 */
 	private static DrawPanel drawPanel = new DrawPanel();
 	
+	/**
+	 * creates the window that is displayed
+	 * @param title of the frame
+	 */
 	public DrawFrame(String title)
 	{
 		JFrame frame = new JFrame(title);
@@ -50,6 +57,6 @@ public class DrawFrame extends JFrame
 		drawPanel.addShape(riv1);
 		drawPanel.addShape(riv2);
 		
-		DrawFrame drawFrame = new DrawFrame("test");
+		DrawFrame drawFrame = new DrawFrame("Sunny Scenery");
 	}
 }	

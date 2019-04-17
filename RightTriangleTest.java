@@ -2,7 +2,11 @@ import java.awt.Color;
 import java.awt.Point;
 import org.junit.Assert;
 import org.junit.Test;
-
+/**
+ * tests the RightTriangle class
+ * @author CJGam
+ *
+ */
 public class RightTriangleTest 
 {
 	private static RightTriangle RT1 = new RightTriangle(new Point(100, 100), 50, 50, Color.RED, true);
@@ -14,6 +18,9 @@ public class RightTriangleTest
 	private static Point RT2U = new Point(100, 100);
 	private static Point RT2B = new Point(100, 100);	
 	
+	/**
+	 * Tests if the constructor computed the correct points
+	 */
 	@Test
 	public void testContstuctorComputedPoints() 
 	{
@@ -30,12 +37,18 @@ public class RightTriangleTest
         Assert.assertTrue(ShapeUtils.pointInSet(pts2, RT2U));
 	}
 
+	/**
+	 * tests if the constructor filled in the shape correctly
+	 */
 	public void testConstructorFilled()
 	{
         Assert.assertTrue(RT1.isFilled());
         Assert.assertFalse(RT2.isFilled());	
 	}
 	
+	/**
+	 * tests if the constructor set the correct color
+	 */
 	public void testConstructorColor()
 	{
 		Color clr1 = RT1.getColor();

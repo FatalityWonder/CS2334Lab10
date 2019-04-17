@@ -2,14 +2,28 @@ import java.awt.BasicStroke;
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
-
+/**
+ * base class for polygons and draws them
+ * 
+ * @author CJGam
+ *
+ */
 public abstract class Polygon extends Shape
 {	
+	/**
+	 * Creates a polygon with color and filled
+	 * 
+	 * @param color Color of the polygon
+	 * @param filled Polygon filled in
+	 */
 	public Polygon(Color color, boolean filled) 
 	{
 		super(color, filled);
 	}
-
+	
+	/**
+	 * draws the shape
+	 */
 	@Override
 	public void draw(Graphics graphics) 
 	{

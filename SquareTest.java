@@ -2,7 +2,11 @@ import java.awt.Color;
 import java.awt.Point;
 import org.junit.Assert;
 import org.junit.Test;
-
+/**
+ * Tests the Square class
+ * @author CJGam
+ *
+ */
 public class SquareTest 
 {
 	private static Square SQ1 = new Square(new Point(100, 100), 50, Color.BLACK, true);
@@ -16,6 +20,9 @@ public class SquareTest
 	private static Point SQ2UR = new Point(200, 100);
 	private static Point SQ2LR = new Point(200, 200);
 	
+	/**
+	 * Tests if the constructor set the correct corners of the square
+	 */
 	@Test
 	public void testContstuctorComputedPoints() 
 	{
@@ -34,12 +41,18 @@ public class SquareTest
         Assert.assertTrue(ShapeUtils.pointInSet(pts2, SQ2LL));
 	}
 	
+	/**
+	 * tests if the constructor filled in the shape correctly.
+	 */
 	public void testConstructorFilled()
 	{
         Assert.assertTrue(SQ1.isFilled());
         Assert.assertFalse(SQ2.isFilled());
 	}
 	
+	/**
+	 * Tests if the constructor set the correct color
+	 */
 	public void testConstructorColor()
 	{
 		Color clr1 = SQ1.getColor();

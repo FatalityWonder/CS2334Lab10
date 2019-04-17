@@ -2,7 +2,11 @@ import java.awt.Color;
 import java.awt.Point;
 import org.junit.Assert;
 import org.junit.Test;
-
+/**
+ * tests the Isosceles Triangle class
+ * @author CJGam
+ *
+ */
 public class IsoscelesTriangleTest 
 {
 	private static IsoscelesTriangle IS1 = new IsoscelesTriangle(new Point(100, 100), 50, 50, Color.CYAN, true);
@@ -14,6 +18,9 @@ public class IsoscelesTriangleTest
 	private static Point RT2B = new Point(200, 100);
 	private static Point RT2P = new Point(150, 175);
 	
+	/**
+	 * tests if the constructor properly computed points
+	 */
 	@Test
 	public void testContstuctorComputedPoints() 
 	{
@@ -30,12 +37,18 @@ public class IsoscelesTriangleTest
         Assert.assertTrue(ShapeUtils.pointInSet(pts2, RT2P));
 	}
 	
+	/**
+	 * tests if the constructor filled in the shape properly
+	 */
 	public void testConstructorFilled()
 	{
         Assert.assertTrue(IS1.isFilled());
         Assert.assertFalse(IS2.isFilled());	
 	}
 	
+	/**
+	 * tests if the constructor colored the shape properly
+	 */
 	public void testConstructorColor()
 	{
 		Color clr1 = IS1.getColor();

@@ -2,7 +2,11 @@ import java.awt.Color;
 import java.awt.Point;
 import org.junit.Assert;
 import org.junit.Test;
-
+/**
+ * tests the Rectangle Class
+ * @author CJGam
+ *
+ */
 public class RectangleTest 
 {
 	private static Rectangle R1 = new Rectangle(new Point(100, 100), 50, 100, Color.BLACK, true);
@@ -16,6 +20,9 @@ public class RectangleTest
 	private static Point R2UR = new Point(175, 100);
 	private static Point R2LR = new Point(175, 250);
 	
+	/**
+	 * Tests if the corners were computed correctly
+	 */
 	@Test
 	public void testContstuctorComputedPoints() 
 	{
@@ -34,12 +41,18 @@ public class RectangleTest
         Assert.assertTrue(ShapeUtils.pointInSet(pts2, R2LL));
 	}
 	
+	/**
+	 * Tests if the constructor filled in the rectangle correctly
+	 */
 	public void testConstructorFilled()
 	{
         Assert.assertTrue(R1.isFilled());
         Assert.assertFalse(R2.isFilled());	
 	}
 	
+	/**
+	 * Tests if the constructor set the correct color
+	 */
 	public void testConstructorColor()
 	{
 		Color clr1 = R1.getColor();

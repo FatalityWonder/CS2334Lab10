@@ -1,9 +1,20 @@
 import java.awt.Color;
 import java.awt.Point;
-
+/**
+ * Class representing Polylines
+ * @author CJGam
+ *
+ */
 public class PolyLine extends Polygon 
 {
-
+	/**
+	 * Constructor for PolyLine
+	 * @param pointUL Upper Left Corner
+	 * @param pointUR Upper Right Corner
+	 * @param thickness Thickness of the PolyLine
+	 * @param color Color of the PolyLine
+	 * @param filled If the PolyLine is filled
+	 */
 	public PolyLine(Point pointUL, Point pointUR, int thickness, Color color, boolean filled) 
 	{
 		super(color, filled);
